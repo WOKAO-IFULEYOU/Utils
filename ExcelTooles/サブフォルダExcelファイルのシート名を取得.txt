@@ -94,13 +94,14 @@ Sub ProcessAllSubfolders(ByVal parentFolder As String)
         fileName = Dir()
         
     Loop
-    
-NEXT_TASK:
+
     For Each subFolder In folder.SubFolders
         ' サブフォルダ内のファイルに対する処理をここに追加します
         ProcessAllSubfolders subFolder.Path
     Next subFolder
     
+NEXT_TASK:
+
 End Sub
 
 'ファイルのシート名を配列として戻す
